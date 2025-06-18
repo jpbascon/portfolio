@@ -1,0 +1,76 @@
+.main-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 950px;
+}
+
+.welcome {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.scroll {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll span.scroll-opacity {
+  width: 5px;
+  height: 32px;
+  border-radius: 2px;
+  background: white;
+  opacity: 0;
+  animation: blink-span-reveal 2.7s infinite;
+  transition: opacity 0.7s;
+}
+
+@keyframes blink-span-reveal {
+  0% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+
+  75% {
+    opacity: 1;
+    transform: translateY(5px);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(0px);
+  }
+}
+
+#typing-effect {
+  border-right: 8px solid white;
+  white-space: nowrap;
+  overflow: hidden;
+  width: fit-content;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
